@@ -1,0 +1,24 @@
+{
+  "name": "group",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^4.3.2",
+    "@types/node": "^20.2.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "jasmine": "^5.0.0",
+    "jasmine-spec-reporter": "^7.0.0"
+  }
+}
