@@ -18,8 +18,8 @@ ApiRoute.get("/", async (req, res) => {
 ApiRoute.get("/api", logger,  async (req, res) => {
   try {
     res.status(200).send("welcome to image processing api");
-  } catch (err) {
-    err;
+  } catch(err) {
+    
   }
 });
 

@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const supertest_1 = __importDefault(require("supertest"));
-// import image route
-const imageRoute_1 = __importDefault(require("../../../routes/api/imageRoute"));
-const request = (0, supertest_1.default)(imageRoute_1.default);
+// import api route
+const server_1 = __importDefault(require("../../../server"));
+const request = (0, supertest_1.default)(server_1.default);
 describe("to test all image routes", () => {
     describe("to test get all images route /images", () => {
         it("list all images", () => __awaiter(void 0, void 0, void 0, function* () {

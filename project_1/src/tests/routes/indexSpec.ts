@@ -1,9 +1,9 @@
 import supertest from "supertest";
 
 // importing api route
-import ApiRoute from "../../routes";
+import app from "../../server";
 
-const request = supertest(ApiRoute);
+const request = supertest(app);
 
 describe("To test index api routes response endpoints", () => {
   describe("To test /api", () => {

@@ -31,7 +31,6 @@ ApiRoute.get("/api", logger_1.default, (req, res) => __awaiter(void 0, void 0, v
         res.status(200).send("welcome to image processing api");
     }
     catch (err) {
-        err;
     }
 }));
 ApiRoute.use("/api", logger_1.default, imageRoute_1.default);

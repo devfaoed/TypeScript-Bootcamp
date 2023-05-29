@@ -13,13 +13,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const supertest_1 = __importDefault(require("supertest"));
-// importing api route
-const server_1 = __importDefault(require("../../server"));
+// import api route
+const server_1 = __importDefault(require("../../../server"));
 const request = (0, supertest_1.default)(server_1.default);
-describe("To test index api routes response endpoints", () => {
-    describe("To test /api", () => {
-        it("get /api endpoint", () => __awaiter(void 0, void 0, void 0, function* () {
-            const response = yield request.get("/api");
+describe("to test all image routes", () => {
+    describe("to test get all images route /images", () => {
+        it("list all images", () => __awaiter(void 0, void 0, void 0, function* () {
+            let response = yield request.get("/api/images");
             expect(response.status).toBe(200);
         }));
     });
