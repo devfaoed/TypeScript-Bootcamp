@@ -8,7 +8,7 @@ const port = 8000;
 // default endpoint
 app.get("/api", async (req, res) => {
   try {
-    await res.status(200).send("hello world");
+    res.status(200).send("hello world");
   } catch (err) {
     err;
   }
