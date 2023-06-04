@@ -1,29 +1,39 @@
 import express from "express";
-import sharp from "sharp";
-
+import Image from "image-js";
 const imageRoute = express.Router();
 
 // geta all images
 imageRoute.get("/images", async (req, res) => {
   try {
-    res.status(200).send("this route display all image");
+    res.status(200).render("images");
   } catch (err) {
     err;
   }
 });
 
 // get a specific image and reseize
-imageRoute.get("/image/reseize", async (req, res) => {
-  try {
-    const reseize = await sharp("../asset/img/full/hero-cover-01.jpg")
-      .rotate()
-      .resize(200, 200)
-      .toFile("../asset/img/reseize/hero-cover-01.jpg");
-    res.status(200).send(reseize);
-    console.log("image processed successfully");
-  } catch (err) {
-    err;
-  }
-});
+// imageRoute.get("/image/pro",  async(req, res) => {
+//  try{
+//   let image = await Image.load('img/bird.jpg');
+//     let grey = image
+//       .grey() // convert the image to greyscale.
+//       .resize({ width: 20 }) // resize the image, forcing a width of 200 pixels. The height is computed automatically to preserve the aspect ratio.
+//       .rotate(30); // rotate the image clockwise by 30 degrees.
+//     return grey.save('img/full/bird.jpg');
+//     res.status(200).send("image process successfully")
+//   }catch(error){
+//     console.log(error)
+//  }
+// // execute().catch(console.error);
+
+// // async function execute() {
+// //   let image = await Image.load('img/bird.jpg');
+// //   let grey = image
+// //     .grey() // convert the image to greyscale.
+// //     .resize({ width: 200 }) // resize the image, forcing a width of 200 pixels. The height is computed automatically to preserve the aspect ratio.
+// //     .rotate(30); // rotate the image clockwise by 30 degrees.
+// //   return grey.save('img/full/bird.jpg');
+// // }
+// });
 
 export default imageRoute;
