@@ -24,10 +24,13 @@ mongoose
 
 // importing handlers 
 import weaponRouthe from "./handlers/weapon";
+import userRouthe from "./handlers/user";
+
 
 app.use(bodyParser.json());
 
 app.use("/api", weaponRouthe)
+app.use("/api", userRouthe)
 
 app.get("/", async (req, res) => {
   try {
