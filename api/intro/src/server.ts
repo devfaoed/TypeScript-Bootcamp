@@ -22,15 +22,16 @@ mongoose
     console.log("unable to connect to database");
   });
 
-// importing handlers 
+// importing handlers
 import weaponRouthe from "./handlers/weapon";
 import userRouthe from "./handlers/user";
-
+import orderRouthe from "./handlers/order";
 
 app.use(bodyParser.json());
 
-app.use("/api", weaponRouthe)
-app.use("/api", userRouthe)
+app.use("/api", weaponRouthe);
+app.use("/api", userRouthe);
+app.use("/api", orderRouthe);
 
 app.get("/", async (req, res) => {
   try {

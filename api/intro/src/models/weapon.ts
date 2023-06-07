@@ -21,6 +21,6 @@ const interfaceSchema = new mongoose.Schema<fantansy>({
   },
 });
 
-const fanatasy = mongoose.model("Fantasy", interfaceSchema);
+const Weapon = mongoose.model("Weapon", interfaceSchema);
 
-export default fanatasy;
+export default Weapon;

@@ -20,7 +20,8 @@ userRouthe.post("/signup", async (req, res) => {
         
         const user = await User.create(newUser);
         const token = jwt.sign({iuser:user}, "process.env.app.secret.ENCRYPT")
-        res.json(token)
+        res.status(201).json(token)
+        console.log(user)
     } catch (error) {
         console.log(error)
     }
